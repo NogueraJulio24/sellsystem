@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @sell_price.price %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @sell_price.total %>
+</p>
+
+<p>
+  <strong>Cant:</strong>
+  <%= @sell_price.cant %>
+</p>
+
+<%= link_to 'Edit', edit_sell_price_path(@sell_price) %> |
+<%= link_to 'Back', sell_prices_path %>

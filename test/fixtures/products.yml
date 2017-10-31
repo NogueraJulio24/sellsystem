@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplier: one
+  purchase_price: 1.5
+  status: false
+  cant: 1.5
+  sell_price: one
+  category: one
+
+two:
+  supplier: two
+  purchase_price: 1.5
+  status: false
+  cant: 1.5
+  sell_price: two
+  category: two
