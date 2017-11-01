@@ -9,20 +9,27 @@
   </head>
 
   <body>
+    
+    <% if user_signed_in? %>
+      <!-- Navbar goes here -->
+        <%= render :partial => 'layouts/navbar' %>
+      <!-- Page Layout here -->
+        <div class="row">
+          <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
+    		    <%= render :partial => 'layouts/side-nav' %>
+          </div>
 
-    <!-- Navbar goes here -->
-      <%= render :partial => 'layouts/navbar' %>    
-    <!-- Page Layout here -->
-    <div class="row">
-      <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
-		    <%= render :partial => 'layouts/side-nav' %>
-      </div>
+          <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+    			   <%= yield %>
+          </div>
+        </div>
 
-      <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
-			   <%= yield %>
-      </div>
+    <% else %>
 
-    </div>
-          
+      <%=yield %>
+
+    <% end %>
+
+
   </body>
 </html>

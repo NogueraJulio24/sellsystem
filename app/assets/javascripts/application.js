@@ -12,7 +12,8 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require jquery  
+//= require jquery
+//= require cocoon
 //= require materialize-sprockets
 //= require_tree .
 
@@ -27,3 +28,6 @@ $(document).ready(function() {
   $('.collapsible').collapsible();
 });
 
+$(document).ready(function(){
+  $('#client-modal').modal('open');
+})

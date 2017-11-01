@@ -1,57 +1,66 @@
-<%= form_with(model: client, local: true) do |form| %>
-  <% if client.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+ <!-- Modal Structure -->
+ <div id="client-modal" class="modal">
+   <div class="modal-content">
+     <h4>Modal Header</h4>
+     <p>A bunch of text</p>
+   </div>
+      <%= form_with(model: client, local: true) do |form| %>
+        <% if client.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
 
-      <ul>
-      <% client.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+            <ul>
+            <% client.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-  <div class="input-field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :client_name %>
-  </div>
+        <div class="input-field">
+          <%= form.label :name %>
+          <%= form.text_field :name, id: :client_name %>
+        </div>
 
-  <div class="input-field">
-    <%= form.label :lastname %>
-    <%= form.text_field :lastname, id: :client_lastname %>
-  </div>
+        <div class="input-field">
+          <%= form.label :lastname %>
+          <%= form.text_field :lastname, id: :client_lastname %>
+        </div>
 
-  <div class="input-field">
-    <%= form.label :document %>
-    <%= form.text_field :document, id: :client_document %>
-  </div>
+        <div class="input-field">
+          <%= form.label :document %>
+          <%= form.text_field :document, id: :client_document %>
+        </div>
 
-  <div class="input-field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, id: :client_phone %>
-  </div>
+        <div class="input-field">
+          <%= form.label :phone %>
+          <%= form.text_field :phone, id: :client_phone %>
+        </div>
 
-  <div class="input-field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :client_email %>
-  </div>
+        <div class="input-field">
+          <%= form.label :email %>
+          <%= form.text_field :email, id: :client_email %>
+        </div>
 
-  <div class="input-field">
-    <%= form.label :smartphone %>
-    <%= form.text_field :smartphone, id: :client_smartphone %>
-  </div>
+        <div class="input-field">
+          <%= form.label :smartphone %>
+          <%= form.text_field :smartphone, id: :client_smartphone %>
+        </div>
 
-  <div class="input-field">
-    <%= form.label :address_id %>
-    <%= form.text_field :address_id, id: :client_address_id %>
-  </div>
+        <div class="input-field">
+          <%= form.label :address_id %>
+          <%= form.text_field :address_id, id: :client_address_id %>
+        </div>
 
-  <div class="browser-default">
-    <%= form.label :date_of_birth %>
-    <%= form.date_select :date_of_birth, id: :client_date_of_birth %>
-  </div>
+        <div class="browser-default">
+          <%= form.label :date_of_birth %>
+          <%= form.date_select :date_of_birth, id: :client_date_of_birth %>
+        </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+        <div class="modal-footer">
+          <div class="actions">
+            <%= form.submit %>
+          </div>
+        <% end %>
+      </div>
+</div>

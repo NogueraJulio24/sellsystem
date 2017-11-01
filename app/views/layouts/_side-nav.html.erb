@@ -3,22 +3,37 @@
       <div class="background">
         <img src="">
       </div>
-      <a href="#!user"><img class="circle" src=""></a>
-      <a href="#!name"><span class="black-text name">John Doe</span></a>
-      <a href="#!email"><span class="black-text email">jdandturk@gmail.com</span></a>
+      <a href="#!user"><img class="circle center" src=""></a>
+      <a href="#!name"><span class="black-text name"><%= current_user.name %></span></a>
+      <a href="#!email"><span class="black-text email"><%= current_user.email %></span></a>
     </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!"><i class="material-icons">person</i>Perfil de Usuario</a></li>
     <li><a href="#!">Second Link</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Subheader</a></li>
-    <li><%= link_to 'Dashboard', root_path, :class => 'waves-effect' %></li>
-    <li><%= link_to 'Clientes', clients_path, :class => 'waves-effect' %></li>
-    <li><%= link_to 'Productos', products_path, :class => 'waves-effect' %></li>
-    <li><%= link_to 'Proveedores', suppliers_path, :class => 'waves-effect' %></li>
-    <li><%= link_to 'Ventas', sells_path, :class => 'waves-effect' %></li>
+      <li>
+          <%= link_to sells_path, :class => 'waves-effect' do %>
+            <i class="material-icons">home</i>Dashboard
+          <% end -%>
+      </li>
+      <li>
+          <%= link_to clients_path, :class => 'waves-effect' do %>
+            <i class="material-icons">supervisor_account</i>Clientes
+          <% end -%>
+      </li>
+      <li>
+          <%= link_to products_path, :class => 'waves-effect' do %>
+            <i class="material-icons">business_center</i>Productos
+          <% end -%>
+      </li>
+      <li>
+          <%= link_to suppliers_path, :class => 'waves-effect' do %>
+            <i class="material-icons">arrow_downward</i>Proveedores
+          <% end -%>
+      </li>
+      <li>
+          <%= link_to sells_path, :class => 'waves-effect' do %>
+            <i class="material-icons">local_grocery_store</i>Ventas
+          <% end -%>
+      </li>
   </ul>
-
-
-
-    
-            
